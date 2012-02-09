@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <title>
+   Search results
+  </title>
+ </head>
+<body>
+  <h1>Search results</h1>
+    <table border="1">
+      <tr>
+         <td width="40%"><p align="center"><i><b>University</b></i></td>
+         <td width="20%"><p align="center"><i><b>Location</b></i></td>
+      </tr>
+          <% @universities.each do |university| %>
+       <tr>
+         <td><a href="<%=university.id%>"><%=university.name%></a></td>
+         <td><%=university.location%></td>
+       </tr>
+       <% end %>
+    </table>
+<p><a href="/universities">Back</a></p>
+</body>
+</html>

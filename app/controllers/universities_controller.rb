@@ -80,4 +80,8 @@ class UniversitiesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def search
+    @universities = University.find(:all,:conditions => ["name LIKE?","%#{params[:key]}%"])
+  end
 end

@@ -1,5 +1,13 @@
 School::Application.routes.draw do
-  resources :universities
+  get "pages/home"
+
+  get "pages/contact"
+
+  get "pages/aboutus"
+
+  resources :universities do
+    get :list, :on=> :collection
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
