@@ -4,7 +4,8 @@ School::Application.routes.draw do
   get "pages/contact"
 
   get "pages/aboutus"
-
+  
+  
   resources :universities do
     get :list, :on=> :collection
   end

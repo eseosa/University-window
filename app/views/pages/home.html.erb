@@ -1,46 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails Tutorial Sample App | Home</title>
-    <style type="text/css" media="screen">
-    #content {
-        float: left;
-        background-color: #d3d3d3;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
-  </head>
-  <body>
     <div id="page">
     <h1>Obtaining Knowledge Is Power</h1>
     <p>
@@ -50,12 +7,10 @@
       <div id="sidebar"><h3>Quick Links</h3>
             <ul class="links">
               <li><a href="/universities">University</a></li>
-              <li><a href="pages/contact">Contact</a></li>
-              <li><a href="pages/aboutus">About us</a></li>
+              <li><%= link_to 'Contact', pages_contact_path %></li>
+              <li><%= link_to 'About us', pages_aboutus_path %></li>
               <li><a href="/login">Login</a></li>
             </ul>
       </div>
     </p>
     </div>
-  </body>
-</html>

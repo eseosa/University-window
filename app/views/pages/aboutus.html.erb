@@ -1,2 +1,16 @@
-<h1>Pages#aboutus</h1>
-<p>Find me in app/views/pages/aboutus.html.erb</p>
+<div id="page"><h1>About Us</h1>
+    <div id="content"><p><h2>Company Overview</h2></p>
+    <p>We provide details of over 20,300 universities located in the world. We evaluate the standard
+    of the universities from their current ranking in the world and we provide all the universities'
+    information for intending students. This ranking results are obtained
+    from <a href="http://www.eduroute.info">Eduroute.info website</a>.</p></div>
+    <div id="sidebar"><h3>Quick Links</h3>
+            <ul class="links">
+              <li><a href="/universities">University</a></li>
+              <li><%= link_to 'Contact', pages_contact_path %></li>
+              <li><%= link_to 'Home', pages_home_path %></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
+    </div>
+    </div>
+  

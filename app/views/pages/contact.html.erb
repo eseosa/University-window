@@ -1,2 +1,14 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<div id="page"><h1>Contact Details</h1>
+  <div id="content">
+  <p>Please click <a href="http://www.eduroute.info">here</a> to get
+further details and contacts on universities.</p></div>
+  <div id="sidebar"><h3>Quick Links</h3>
+            <ul class="links">
+              <li><a href="/universities">University</a></li>
+              <li><%= link_to 'Home', pages_home_path %></li>
+              <li><%= link_to 'About us', pages_aboutus_path %></li>
+              <li><a href="/login">Login</a></li>
+            </ul>
+    </div>
+  </div>
+
