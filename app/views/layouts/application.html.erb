@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails | <%= @title %> </title>
+    <title><%= @title %> </title>
     <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
     <style type="text/css" media="screen">
     #content {
         float: left;
@@ -42,6 +45,24 @@
     </style>
   </head>
   <body>
+    <div class="container">
+      <header>
+        <%= image_tag("logo.png", :alt => "Education", :class=> "round")%>
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Home", pages_home_path %></li>
+            <li><%= link_to "About us", pages_aboutus_path %></li>
+            <li><%= link_to "Contact", pages_contact_path %></li>
+          </ul>
+        </nav>
+      </header>
+     <% flash.each do |name, msg| %>  
+
+    <%= content_tag :div, msg, :id => "flash#{name}" %>  
+
+  <% end %>  
+
+
     <%= yield %>
   </body>
 </html>
