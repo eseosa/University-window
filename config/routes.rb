@@ -12,6 +12,8 @@ School::Application.routes.draw do
 
   get "pages/aboutus"
   
+  get "pages/help"
+  
   
   resources :universities do
     get :list, :on=> :collection

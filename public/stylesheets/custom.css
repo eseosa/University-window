@@ -1,13 +1,20 @@
 .container {
-  width: 710px;
+  width: 1200px;
+  margin-left: 30px;
 }
+
+html {
+  overflow-y: scroll;
+}
+
 
 body {
   background: #cff;
+  padding-top: 25px;
 }
 
 header {
-  padding-top: 20px;
+  padding-top: 8px;
 }
 
 header img {
@@ -46,7 +53,7 @@ nav {
 }
 
 nav {
-  background-color: white;
+  background-color: #8fbc8f;
   padding: 0 0.7em;
   white-space: nowrap;
 }
@@ -68,7 +75,7 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: #ff00ff;
 }
 
 nav ul li a:hover {
@@ -78,4 +85,39 @@ nav ul li a:hover {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
+}
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+footer {
+  margin-top: 330px;
+  padding-top: 10px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+footer a {
+  color: #555;
+}  
+
+footer a:hover { 
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
 }

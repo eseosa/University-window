@@ -3,11 +3,14 @@
   <head>
     <title><%= @title %> </title>
     <%= csrf_meta_tag %>
-    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+    <script>
+      $(function(){$( "#accordion" ).accordion();});
+    </script>
     <style type="text/css" media="screen">
-    #content {
+      #content {
         float: left;
         background-color: #d3d3d3;
         border: 3px solid #aaa;
@@ -34,9 +37,10 @@
       }
       #sidebar ul.links li {
         margin-bottom: 5px;
+        
       }
       #page {
-        background-color: #f0f0f0;
+        background-color: #a9a9a9;
         width: 750px;
         margin: 0;
         margin-left: auto;
@@ -53,16 +57,19 @@
             <li><%= link_to "Home", pages_home_path %></li>
             <li><%= link_to "About us", pages_aboutus_path %></li>
             <li><%= link_to "Contact", pages_contact_path %></li>
+            <li><%= link_to "Help", pages_help_path %></li>
           </ul>
         </nav>
       </header>
-     <% flash.each do |name, msg| %>  
+       <% flash.each do |name, msg| %>  
 
-    <%= content_tag :div, msg, :id => "flash#{name}" %>  
+       <%= content_tag :div, msg, :id => "flash#{name}" %>  
 
-  <% end %>  
+      <% end %>  
 
-
-    <%= yield %>
+    
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
