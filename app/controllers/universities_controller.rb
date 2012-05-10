@@ -3,7 +3,7 @@ class UniversitiesController < ApplicationController
   # GET /universities.xml
   def index
     @universities = University.all
-
+    @title = "University"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @universities }
@@ -14,7 +14,7 @@ class UniversitiesController < ApplicationController
   # GET /universities/1.xml
   def show
     @university = University.find(params[:id])
-
+    @title = "University"
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @university }
@@ -25,7 +25,7 @@ class UniversitiesController < ApplicationController
   # GET /universities/new.xml
   def new
     @university = University.new
-
+    @title = "CreateUniversity"
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @university }
@@ -35,6 +35,7 @@ class UniversitiesController < ApplicationController
   # GET /universities/1/edit
   def edit
     @university = University.find(params[:id])
+    @title = "EditUniversity"
   end
 
   # POST /universities
